@@ -1,2 +1,8 @@
 # Ignorar pycache
 __pycache__/
+
+# Ignorar pdf
+*.pdf
+
+# Ignorar user_agents.txt
+user_agents.txt
