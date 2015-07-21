@@ -50,15 +50,10 @@ function Download(data, username){
 		            { text: 'Rut: ' + data.Datos[0], style: 'header', alignment:'left', colSpan:2 }, 
 		            {}],
 		        [
-		        	{ text: 'Curriculum: 40013 - INGENIERIA CIVIL', style: 'curso', colSpan: 2 }, 
+		        	{ text: 'Carrera: ' + data.Carrera, style: 'curso', colSpan:2 }, 
 		            {}, 
-		            { text: 'Carrera: ' + data.Carrera, style: 'curso' }, 
-		            { text: 'Plan :201321', style: 'curso' }],
-		        [
-		        	{ text: 'Año Ingreso: 2013', style: 'curso' }, 
 		            { text: 'Escuela: ' + data.Escuela, style: 'curso' },
-		            { text: 'Situación: REGULAR', style: 'curso' }, 
-		            { text: 'Programa: ' + data.Programa, style: 'curso' }],
+		            { text: 'Programa: ' + data.Programa, style: 'curso' }]
 		        ]
 		    }
 		}
