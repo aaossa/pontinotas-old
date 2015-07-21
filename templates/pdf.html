@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <title>Descarga tu PDF</title>
+  <meta name="description" content="Una simple aplicacion para facilitar la vida de la comunidad universitaria de la PUC, por Antonio Ossa">
+  <link rel="author" href="https://github.com/aaossa"/>
+
+  <!-- pdfmake: https://github.com/bpampuch/pdfmake/ -->
+  <script src="{{ url_for('static',filename='pdfmake/pdfmake.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='pdfmake/vfs_fonts.js') }}"></script>
+  <!-- Script necesario para generar el pdf con pdfmake-->
+  <script src="{{ url_for('static',filename='js/generatePdf.js') }}"></script>
+  <!-- Diseño -->
+  <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen"> 
+  <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen"> 
+  <!-- Script -->
+  <script>
+    var info = JSON.parse('{{ data|safe }}');
+    var user = '{{ username|safe }}';
+  </script>
+</head>
+
+<body>
+
+  <div class="body"/>
+
+  <!-- Boton que inicia la creacion del pdf -->
+  <div class="outer">
+  <div class="middle">
+  <div class="inner">
+    <div style="text-align:center">  
+      <form class="pdf" method="post" action="{{ url_for('out') }}">
+        <input type="submit" value="Obtener .pdf" class="submitButton" onClick="Download(info, user);">
+      </form>
+    </div>  
+  </div>
+  </div>
+  </div>
+
+</body>
+</html>
+
+

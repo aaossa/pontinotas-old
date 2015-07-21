@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+    <head>
+
+        <meta charset="UTF-8">
+
+        <!-- Importante: http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013 -->
+
+        <!-- Informacion directa -->
+        <title>¿Te gustó? Compartelo</title>
+        <meta name="description" content="Una simple aplicacion para facilitar la vida de la comunidad universitaria de la PUC, por Antonio Ossa">
+        <link rel="author" href="https://github.com/aaossa"/>
+
+		<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen"> 
+		<link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen"> 
+
+    </head>
+
+
+    <body>
+
+        <div class="body"/>
+
+        <div class="outer">
+		<div class="middle">
+		<div class="inner">
+			<div class="form-box">
+			    <div class="form-top">
+			        <div class="form-top-left">
+			        	<div class="header">
+							<div>Ponti<span>Notas</span></div>
+						</div>
+			        </div>
+			        <div class="form-top-right">
+			            <i class="fa fa-lock"></i>
+			        </div>
+			    </div>
+
+			    <div class="form-bottom">
+			        <form class="login">
+					    <div align="center" class="form-bottom">
+					        <!-- Facebook -->
+						    <a href="http://www.facebook.com/sharer.php?u=http://pontinotas.herokuapp.com" target="_blank">
+						        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+						    </a>
+						    </a>
+						    <!-- Email -->
+						    <a href="mailto:aaossa@uc.cl?Subject=Pontinotas?Body=Rellena%20con%20tu%20feedback">
+						        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+						    </a>
+						    <!-- Twitter -->
+						    <a href="https://twitter.com/share?url=http://pontinotas.herokuapp.com&amp;name=PontiNotas&amp;hashtags=PontiNotas" target="_blank">
+						        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+						    </a>
+						</div>
+					</form>
+			</div>
+		</div>
+		</div>
+		</div>
+
+    </body>
+
+
+</html>
