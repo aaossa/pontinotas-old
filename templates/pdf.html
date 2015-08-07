@@ -8,7 +8,13 @@
         <link rel="author" href="https://github.com/aaossa"/>
 
         <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen"> 
-
+        
+        <!-- pdfmake: https://github.com/bpampuch/pdfmake/ -->
+        <script src="{{ url_for('static',filename='js/pdfmake/pdfmake.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/pdfmake/vfs_fonts.js') }}"></script>
+        <!-- Script necesario para generar el pdf con pdfmake-->
+        <script src="{{ url_for('static',filename='js/generatePdf.js') }}"></script>
+        <!-- Script Flask a JavaScript-->
     </head>
 
     <body>
@@ -25,12 +31,6 @@
         </div>
         </div>
 
-        <!-- pdfmake: https://github.com/bpampuch/pdfmake/ -->
-        <script src="{{ url_for('static',filename='js/pdfmake/pdfmake.min.js') }}"></script>
-        <script src="{{ url_for('static',filename='js/pdfmake/vfs_fonts.js') }}"></script>
-        <!-- Script necesario para generar el pdf con pdfmake-->
-        <script src="{{ url_for('static',filename='js/generatePdf.js') }}"></script>
-        <!-- Script Flask a JavaScript-->
         <script>
             var info = JSON.parse('{{ data|safe }}');
             var user = '{{ username|safe }}';
