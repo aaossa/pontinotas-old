@@ -120,13 +120,16 @@ def getDict(respuesta):
 
             # Guardamos los cursos en su semestre correspondiente
             sub_linea = next(lineas)[:-2]
-            while not sub_linea.startswith("Totales") and not sub_linea.startswith("!"):
-                if sub_linea[0].isdigit():
-                    Ficha.Pendientes[-1][linea][-
-                                                1].append(sub_linea[:sub_linea.find(" ")])
-                else:
-                    Ficha.Pendientes[-1][linea].append(sub_linea.split(" | "))
-                sub_linea = next(lineas)[:-2]
+            while not sub_linea.startswith("Totales") and not sub_linea.startswith("!") and not len(sub_linea) == 0:
+                try: 
+                    if sub_linea[0].isdigit():
+                        Ficha.Pendientes[-1][linea][-
+                                                    1].append(sub_linea[:sub_linea.find(" ")])
+                    else:
+                        Ficha.Pendientes[-1][linea].append(sub_linea.split(" | "))
+                    sub_linea = next(lineas)[:-2]
+                except:
+                    pass
 
         # Totales historial academico
         elif linea.startswith("TOTALES HIST ACAD (PREGRADO)"):
