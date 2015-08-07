@@ -1,67 +1,27 @@
 <!DOCTYPE html>
-<html >
+<html>
+
     <head>
-
-        <meta charset="UTF-8">
-
-        <!-- Importante: http://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013 -->
-
-        <!-- Informacion directa -->
-        <title>¿Te gustó? Opina y compartelo</title>
+    	<title>Compartelo y opina :)</title>
+        <meta charset=utf-8>
         <meta name="description" content="Una simple aplicacion para facilitar la vida de la comunidad universitaria de la PUC, por Antonio Ossa">
         <link rel="author" href="https://github.com/aaossa"/>
 
-		<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen"> 
-		<link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen"> 
-
+		<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen">
     </head>
 
-
     <body>
-
-        <div class="body"/>
-
-        <div class="outer">
-		<div class="middle">
-		<div class="inner">
-			<div class="form-box">
-			    <div class="form-top">
-			        <div class="form-top-left">
-			        	<div class="header">
-							<div>Ponti<span>Notas</span></div>
-						</div>
-			        </div>
-			        <div class="form-top-right">
-			            <i class="fa fa-lock"></i>
-			        </div>
-			    </div>
-
-			    <div class="form-bottom">
-			        <form class="login">
-					    <div align="center" class="form-bottom">
-					        <!-- Facebook -->
-						    <a href="http://www.facebook.com/sharer.php?u=http://pontinotas.herokuapp.com" target="_blank">
-						        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-						    </a>
-						    </a>
-						    <!-- Email -->
-						    <a href="mailto:aaossa@uc.cl?Subject=Pontinotas?Body=Rellena%20con%20tu%20feedback">
-						        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
-						    </a>
-						    <!-- Twitter -->
-						    <a href="https://twitter.com/share?url=http://pontinotas.herokuapp.com&amp;name=PontiNotas&amp;hashtags=PontiNotas" target="_blank">
-						        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
-						    </a>
-						</div>
-					</form>
-			</div>
-		</div>
-		</div>
-		</div>
-
-	<a href="https://github.com/aaossa/pontinotas"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/8b6b8ccc6da3aa5722903da7b58eb5ab1081adee/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png"></a>
-
+    	<div class="container">
+    	<div class="helper">
+    		<div class="header">
+    			<div>Ponti<span>Notas</span></div>
+    		</div>
+    		<p> Gracias por usar esta pequeña página. Lamento que tardara, pero al menos funciona no? si te gustó o sabes de alguien mas que la necesite no dudes en enviarlo y compartirlo de alguna de las siguientes maneras :)</p>
+    		<ul>
+    			<li><a href="http://www.facebook.com/sharer.php?u=http://pontinotas.herokuapp.com" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook"/></a></li>
+    			<li><a href="https://twitter.com/share?url=http://pontinotas.herokuapp.com&amp;name=PontiNotas&amp;hashtags=PontiNotas" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a></li>
+    		</ul>
+    		<p> Esta página fue desarrollada por mi, <a href="https://github.com/aaossa"><span>Antonio Ossa</span></a>, y puedes encontrar toooodo el código base en <a href="https://github.com/aaossa/pontinotas"><span>este repo de GitHub</span></a>. Ahí también se encuentran todos los recursos de otros autores utilizados durante el proceso que acabas de hacer :). Por último, cualquier comentario o duda puedes enviarlo a mi mail: aaossa@uc.cl. </p>
     </body>
-
 
 </html>
