@@ -4,5 +4,6 @@ __pycache__/
 # Ignorar pdf
 *.pdf
 
-# Ignorar user_agents.txt
+# Ignorar algunos txt
 user_agents.txt
+flask importante.txt
