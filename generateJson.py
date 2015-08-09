@@ -1,23 +1,25 @@
 from html2text import HTML2Text
 
 
-def generador_lineas(text):
-    s = ''
-    text = text + '\n'
-    for char in text:
-        if char == "\n":
-            if len(s) > 1:
-                yield s
-            s = ''
+def generador_lineas(texto):
+    """ Este generador va a traves del texto y detecta los saltos
+    de linea. Cuando alcanza uno retorna la linea actual """
+    linea_parcial = ''
+    texto += '\n'
+    for caracter in texto:
+        if caracter == "\n":
+            if len(linea_parcial) > 1:
+                yield linea_parcial
+            linea_parcial = ''
         else:
-            s = s + char
+            linea_parcial += caracter
     yield None
 
 
 class FichaAcademica:
 
     def __init__(self):
-        """ La idea es poder ir organizando la informacion
+        """ La idea es poder ir acumulando la informacion
         de una forma ordenada para retornarla como diccionario
         y facilitar su paso a json """
         # Carrera
@@ -40,12 +42,12 @@ class FichaAcademica:
 def getDict(respuesta):
 
     # Aqui se obtiene el html y se obtiene el texto plano
-    N = respuesta.text
+    texto_html = respuesta.text
     H = HTML2Text()
-    clean_text = H.handle(N)
+    texto_limpio = H.handle(texto_html)
 
     # Se instancia el generador de lineas de texto
-    lineas = generador_lineas(clean_text)
+    lineas = generador_lineas(texto_limpio)
     Ficha = FichaAcademica()
     in_cursos_en_progreso = False
 
@@ -141,4 +143,5 @@ def getDict(respuesta):
 
         # Queda pendiente el historial academico para posgrado
 
+    # Se retorna el diccionario para usarlo como JSON en javascript
     return Ficha.__dict__
