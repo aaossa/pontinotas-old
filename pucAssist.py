@@ -59,7 +59,7 @@ def Obtener_notas(user, secret):
 
         # Mando mis credenciales para ingresar al portal
         llave = c.post('https://sso.uc.cl/cas/login?service=https://portal.uc.cl/c/portal/login',
-                       data=dict_form(HID, user, secret))
+                       data=dict_form(HIV, user, secret))
         # y reviso si pude ingresar
         if llave.url != 'https://portal.uc.cl/web/home-community/inicio':
             return None
