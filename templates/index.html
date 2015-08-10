@@ -4,7 +4,7 @@
     <head>
     	<title>Pontinotas - Ficha Académica UC en PDF</title>
   		<meta charset=utf-8>
-        <meta name="description" content="Una simple aplicacion para facilitar la vida de la comunidad universitaria de la PUC, por Antonio Ossa">
+        <meta name="description" content="Una simple aplicacion para facilitar la vida de la comunidad universitaria de la PUC, por Antonio Ossa. Obten tu Ficha Academica Acumulada UC en pdf.">
         <link rel="author" href="https://github.com/aaossa"/>
 
 		<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" media="screen"> 
@@ -16,7 +16,7 @@
     		<div class="header">
     			<div>Ponti<span>Notas</span></div>
     		</div>
-    		<p> Ingresa tus credenciales y la página generará un pdf similar al que existía antes en el PortalUC. Así de simple. Tarda un poco en cargar porque sigue una ruta hacia la Ficha Académica, limpia el texto y lo plasma en el nuevo pdf. </p>
+    		<p> Ingresa tus credenciales y la página generará un pdf similar al que existía antes en el PortalUC. Así de simple. Tarda un poco en cargar porque sigue una ruta hacia la Ficha Académica Acumulada, limpia el texto y lo plasma en el nuevo pdf. Todo el código está disponible en <a href="https://github.com/aaossa/pontinotas"><span>GitHub</span></p>
     		<form method="POST" action="{{ url_for('login') }}">
 	    		<ul>
 	    			<li><input name="usuario" type="text" placeholder="Tu usuario UC"></li>
