@@ -1,3 +1,3 @@
-# pontinotas
+# PontiNotas
 
-Una pequeña pagina que genera la Ficha Académica Acumulada de la Universidad Católica de Chile en formato pdf
+Esta branch permitira que el proyecto este disponible a traves de [aaossa.github.io/pontinotas](http://aaossa.github.io/pontinotas). Sera una pagina estatica en primera instancia, pero quizas via API (por desarrollar) sea funcional.
