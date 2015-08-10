@@ -1,9 +1,0 @@
-# Ignorar pycache
-__pycache__/
-
-# Ignorar pdf
-*.pdf
-
-# Ignorar algunos txt
-user_agents.txt
-notas.txt
