@@ -1,7 +1,7 @@
 # PontiNotas :sunglasses:
 Aplicación simple con base funcional en Python 3.4 y disponible en Heroku que permite la creación de un pdf correspondiente a la Ficha Académica Acumulada entregada por la Pontificia Universidad Católica de Chile.
 
-La aplicación se encuentra [**disponible en Heroku**](http://pontinotas.herokuapp.com).
+La aplicación se encuentra en [**pontinotas.herokuapp.com**](http://pontinotas.herokuapp.com).
 
 ## Módulos, librerías y otros
 **Python**: Flask, requests, html2text.
