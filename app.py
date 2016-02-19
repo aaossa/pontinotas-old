@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request, render_template, request
+from flask import Flask, redirect, url_for, request, render_template
 from generateJson import getDict
 from pucAssist import Obtener_notas
 from json import dumps
@@ -34,6 +34,6 @@ if __name__ == "__main__":
     import os
     app.run(
         host='0.0.0.0',
-        debug=True,
+        # debug=True,
         port=int(os.environ.get("PORT", 5000))
     )
