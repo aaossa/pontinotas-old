@@ -20,20 +20,21 @@
 		</script>
     </head>
 
-    <body>
-    	<div class="container">
-    	<div class="helper">
-    		<div class="header">
-    			<div>Ponti<span>Notas</span></div>
-    		</div>
-    		<p> Ingresa tus credenciales y la página generará un pdf similar al que existía antes en el PortalUC. Así de simple. Tarda un poco en cargar porque sigue una ruta hacia la Ficha Académica Acumulada, limpia el texto y lo plasma en el nuevo pdf. Todo el código está disponible en <a href="https://github.com/aaossa/pontinotas"><span>GitHub</span></a></p>
-    		<form method="POST" action="{{ url_for('login') }}">
-	    		<ul>
-	    			<li><input name="usuario" type="text" placeholder="Tu usuario UC"></li>
-	    			<li><input name="password" type="password" placeholder="Tu clave (UC?)"></li>
-	    			<li><input type="submit" value="Generar"></li>
-	    		</ul>
-	    	</form>
-    </body>
+	<body>
 
+		<h1>Ponti<span>Notas</span></h1>
+
+		<p> Ingresa tus credenciales para generar un pdf similar al que existía antes en el PortalUC. 
+		<br>
+		<span>Así de simple.</span> Tarda un poco en cargar, pero estamos en ello :)</p>
+
+		<form method="POST" action="/login">
+			<input name="usuario" type="text" placeholder="Usuario UC">
+			<input name="password" type="password" placeholder="Clave">
+			<input type="submit" value="Generar">
+		</form>
+
+		<p>Todo el código está disponible en <a href="https://github.com/aaossa/pontinotas"><span>GitHub</span></a></p>
+
+	</body>
 </html>

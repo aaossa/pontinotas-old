@@ -1,51 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
 
-/* body: Segmento principal */
-body {	
-	background-attachment: fixed;
-	background-image: url(http://pontinotas.herokuapp.com/static/images/background.jpg);
-	background-position: center;
-	background-repeat: no-repeat;	
-	background-size: cover;
+
+/*
+Basic positions and centering
+*/
+body {
+	background: black;
 	color: white;
-	font-family: 'Roboto', sans-serif;
 	margin: 0 auto;
 	text-align: center;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
+	transform: translateY(60%);
 }
 
-/* header: Diseño para el nombre de la pagina */
-.header div{
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
+/*
+Text color and other styles
+*/
+html {
 	font-family: 'Exo', sans-serif;
+}
+h1 {
 	font-size: 35px;
-	margin: -50px 0 0 0;
-	padding: 20px;	
 }
-.header div span{
-	color: #5379fa !important;
-	font-weight: bold;
-}
-
-/* p: Textos escritos en la pagina */	    
 p {
-	background: rgba(0, 0, 0, 0.8);
 	font-size: 15px;
-	margin: 0;
-	padding: 10px 50px;	
+	padding: 10px;
 }
-p span{
+span {
 	color: #5379fa !important;
 }
 
-/* input: Ingreso de datos y diseño del boton */	    
+/*
+Form
+*/
+form {
+	padding: 20px;
+	margin: 20px auto;
+}
 input {
 	border: 0;
-	font-size: 18px;
+	font-size: 15px;
 	padding: 10px;
 }	    
 input[type="submit"]{
@@ -53,47 +46,25 @@ input[type="submit"]{
 	color: white;
 }
 
-/* ul + li: Ordenamiento de los elementos en la pagina */
-ul {
-	background: rgba(0, 0, 0, 0.8);
-	margin: 50px 0;
-    padding: 10px;    
-}
-li {
-	display: inline;
-    padding: 0px 10px 0px 10px;
-}
-
-/* a: Diseño de los links o referencias */
+/*
+Hyperlinks
+*/
 a {
 	text-decoration: none;
 }
- 
-/* Tomado desde http://stackoverflow.com/questions/12771982 
-para centrar verticalmente en body*/
-.container {
-	display: table;
-	height: 100%;
-	position: absolute;
-	width: 100%;
-}
-.helper {
-	#position: absolute; /*a variation of an "lte ie7" hack*/
-	#top: 50%;
-	display: table-cell;
-	vertical-align: middle;
-}
 
-/* Media queries para que sea responsive*/
+/* 
+Responsive
+*/
 @media (max-width: 650px) {
-	/* Se arregla tamaño de letra */
-	p {
-    	font-size: 15px;
-      	margin: auto;
-    }
-    /* Se despliegan elementos verticalmente */
-	li {
-		display: block;
-        padding: 5px;
-    }    
+	body {
+		transform: translateY(0);
+	}
+	form {
+		display: inline-block;		
+		width: 275px;		
+	}
+	input {
+		margin: 5px;
+	}
 }
