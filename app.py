@@ -1,4 +1,4 @@
-from flask import Flask, session, redirect, url_for, request, render_template, request
+from flask import Flask, redirect, url_for, request, render_template, request
 from generateJson import getDict
 from pucAssist import Obtener_notas
 from json import dumps
@@ -18,20 +18,11 @@ def login():
     """ Destino del POST hecho con las credenciales """
     if request.method == 'POST':
         usuario = request.form['usuario']
-        session[usuario] = request.form['password']
-        return redirect(url_for('inside', user=usuario))
-    return redirect(url_for('404'))  # Metodo no permitido
-
-
-@app.route("/inside/<user>")
-def inside(user):
-    """ Verificacion de credenciales """
-    Notas = Obtener_notas(user, session[user])
-    session.pop(user, None)
-    if Notas:
-        Ficha = getDict(Notas)
-        return render_template('pdf.html', data=dumps(Ficha, ensure_ascii=False), username=user)
-    return redirect(url_for('404'))  # Logeo incorrecto
+        notas = Obtener_notas(usuario, request.form['password'])
+        if notas:
+            Ficha = getDict(notas)
+        return render_template('pdf.html', data=dumps(Ficha, ensure_ascii=False), username=usuario)
+    return redirect(url_for('404'))
 
 
 @app.route("/out", methods=['POST'])

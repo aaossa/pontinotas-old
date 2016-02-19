@@ -28,18 +28,12 @@
     </head>
 
     <body>
-        <div class="container">
-        <div class="helper">
-            <div class="header">
-                <div>Ponti<span>Notas</span></div>
-            </div>
-            <form method="POST" action="{{ url_for('out') }}">
-                <ul>
-                    <li><input type="submit" value="Obtener .pdf" onClick="Download(info, user);"></li>
-                </ul>
-            </form>
-        </div>
-        </div>
+        
+        <h1>Ponti<span>Notas</span></h1>
+
+        <form method="POST" action="{{ url_for('out') }}">
+            <input type="submit" value="Obtener .pdf" onClick="Download(info, user);"></li>
+        </form>
 
         <script>
             var info = JSON.parse('{{ data|safe }}');

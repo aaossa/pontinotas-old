@@ -28,7 +28,7 @@
 		<br>
 		<span>Así de simple.</span> Tarda un poco en cargar, pero estamos en ello :)</p>
 
-		<form method="POST" action="/login">
+		<form method="POST" action="{{ url_for('login') }}">
 			<input name="usuario" type="text" placeholder="Usuario UC">
 			<input name="password" type="password" placeholder="Clave">
 			<input type="submit" value="Generar">
